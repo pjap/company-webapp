@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border="1px">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>JABATAN</th>
+          <th colspan="3">STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% dataJabatan.forEach(rows => { %>
+          <tr>
+            <td><%= rows.id %></td>
+            <td><%= rows.namaJabatan %></td>
+            <td><a href="/jabatan/add">TAMBAH</a></td>
+            <td><a href="/jabatan/edit/<%=rows.id%>">EDIT</a></td>
+            <td><a href="/jabatan/delete/<%=rows.id%>">HAPUS</a></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
